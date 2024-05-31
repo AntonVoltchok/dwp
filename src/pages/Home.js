@@ -7,7 +7,7 @@ import '../styles/App.scss';
 const Home = () => {
 
 const bannerStyles = { 
-  height: '95vh',
+  height: '80vh',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center'
@@ -26,8 +26,8 @@ const bannerStyles = {
 
           <ParallaxBannerLayer
             image={bannerImg}
-            speed={-7} 
-            className="aspect-[5/2]"
+            speed={-40} 
+            className="aspect-[3/2]"
           />
         </ParallaxBanner>
       </header>
