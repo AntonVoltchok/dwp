@@ -1,4 +1,4 @@
-import { ParallaxBanner, ParallaxBannerLayer, Parallax } from 'react-scroll-parallax';
+import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import bannerImg from '../assets/herobanner.png';
 import '../styles/App.scss';
 
