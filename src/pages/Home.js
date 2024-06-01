@@ -17,7 +17,8 @@ const Home = () => {
   return (
     <div className='home-container'>
       <div className='nav-mobile'></div>
-      
+
+
       <header className='hero-banner'>
         <ParallaxBanner style={bannerStyles}>
           <h1 className='hero-text'>De Waal <br />Psychology</h1>
