@@ -21,7 +21,7 @@ const Home = () => {
 
       <header className='hero-banner'>
         <ParallaxBanner style={bannerStyles}>
-          <h1 className='hero-text'>De Waal <br />Psychology</h1>
+          <h1 className='hero-text'>De Waal Psychology</h1>
           <ParallaxBannerLayer
             image={bannerImg}
             speed={-20}

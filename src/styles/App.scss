@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "Jose";
+  font-family: "Railway-Regular";
   /*Can be any text*/
   src: local("AirbnbCerealLight"),
-    url("../assets/JosefinSans-Light.ttf") format("truetype");
+    url("../assets/Raleway-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Jose-Thin";
+  font-family: "Railway-Light";
   /*Can be any text*/
   src: local("AirbnbCerealLight"),
-    url("../assets//JosefinSans-Thin.ttf") format("truetype");
+    url("../assets/Raleway-ExtraLight.ttf") format("truetype");
 }
 
 $hero-height: 92vh;
@@ -23,25 +23,13 @@ $hero-height: 92vh;
   width: 100%;
 }
 
-.nav-mobile {
-  width: 100%;
-  background-color: hsl(0deg 0% 100% / 6%);
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 11;
-  box-shadow: 0 4px 6px 2px hsl(0deg 0% 0% / 15%);
-}
-
 .hero-shadow {
   box-shadow: 11px -59px 31px #333;
   width: 100%;
 }
 
 .hero-text {
-  font-family: "Jose-Thin";
+  font-family: "Railway-Light";
   font-size: 14vw;
   position: absolute;
   z-index: 19;
@@ -55,7 +43,7 @@ $hero-height: 92vh;
 
 @media screen and (min-width: 1000px) {
   .hero-text {
-    font-family: "Jose-Thin";
+    font-family: "Railway-Light";
     font-size: 6.2vw;
     position: absolute;
     z-index: 10;
