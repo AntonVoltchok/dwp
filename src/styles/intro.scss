@@ -1,0 +1,94 @@
+@import "./mixins";
+
+.office-img-mb {
+    background-image: url('../assets/office.png');
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+}
+
+.explore-section-mb {
+    background-color: #bc954e;
+    color: #fff;
+    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 1.5rem 3rem;
+    .explore-content-mb {
+        padding: 1rem 0;
+    }
+}
+
+.quote-card-mb {
+    width: 90vw;
+    background: #FFF1D9;
+    border-radius: 5px;
+    margin-top: -85px;
+    box-shadow: 0px 7px 16px -2px hsla(0, 0%, 0%, 0.47);
+    position: relative;
+    z-index: 100;
+    color: #8A6A47;
+    font-family: "IBMPlexSerif-Italic";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    
+    h4 {
+        padding: 8px 32px 0;
+        text-align: left;
+    }
+    p {
+        text-align: right;
+        margin: -15px 30px 0 0;
+        padding-bottom: 25px;
+    }
+
+}
+
+// Desktop styles
+
+.explore-section {
+    background-color: #bc954e;
+    color: #fff;
+    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include desktopContentPadding;
+    padding-bottom: 3rem;
+        .explore-content {
+            padding: 1rem 4rem 1rem 0;
+    width: 80%;
+        }
+        .quote {
+            width: 60vh;
+            font-family: "IBMPlexSerif-Italic";
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.04rem;
+            text-align: left;
+            padding: 3rem 0 0;
+            p {
+                text-align: center;
+            } 
+    }
+    .content-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .office-img {
+            background-image: url('../assets/office.png');
+            width: 70%;
+            height: 280px;
+            background-position: center;
+            background-size: cover;
+            corner-bottom-left-shape: bevel;
+            border-bottom-left-radius: 35px;
+        }
+    }
+    
+}

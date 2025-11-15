@@ -1,0 +1,13 @@
+// Project SCSS mixins
+// Keep small, reusable mixins here.
+
+// Base font mixin — use to apply project default typography
+@mixin baseFont {
+  font-family: "IBMPlexSerif-Regular", Tahoma, sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+@mixin desktopContentPadding {
+  padding: 0 12vw;
+}

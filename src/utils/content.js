@@ -1,7 +1,7 @@
-export const content = {
+export default {
     title: "De Waal Psychology",
-    subtitle: "Psychotherapy and Assessment Services",
-    quote: "WE MAY NOT BE RESPONSIBLE FOR THE WORLD THAT CREATED OUR MINDS, BUT WE CAN TAKE RESPONSIBILITY FOR THE MIND WITH WHICH WE CREATE OUR WORLD.",
+    subtitle: "THIS ONE IS MANUAL CHANGE LET ME KNOW IF ITS DIFFERENT FROM: Psychotherapy and Assessment Services",
+    quote: "“We may not be responsible for the world that created our minds, but we can take responsibility for the mind with which we create our world.",
     quoteAuthor: "Dr. Gabor Mate",
     description: "Welcome to De Waal Psychology. I work with individuals through a holistic and creative therapeutic lens. I aspire to develop a connection with my clients by way of curiosity and compassion in order to build trust and enhance clients' unique sense of self. With an integrative approach to treatment, I utilize components from several different therapeutic modalities in order to meet the unique needs of the individual. In addition to psychotherapy, De Waal Psychology offers an array of services, including intensive trauma-informed treatment, diagnostic and forensic assessment and consultation.",
     services: [
@@ -168,69 +168,5 @@ export const content = {
         email: 'dr.alexandradewaal@gmail.com',
         office: '48 Burd Street Suite 206 Nyack, NY 10960'
     }
-},
-
-
-
-PODCASTS
-Attachment Theory
-Explaining Trauma
-EMDR Attachment Focused
-Polyamory and Consensual Non - Monogamy
-Dreams: What do they really mean ?
-    Expanded Podcast To Be Magnetic
-
-BOOKS
-Trauma
-When the body Say’s No - Gabor Mate
-Waking the Tiger - Peter Levine
-The Body Keeps The Score - Besser Van Der Kolk
-It Didn't Start with you -  Mark Wylon
-In an Unspoken Voice - Peter Levine
-The Myth of Normal: Trauma, Illness & Healing in a Toxic Culture - Gabor Mate and Daniel Mate
-Relationships
-Getting the love you want - Harville Hendrix
-How We Love - Milan & Kay Yerkovich
-Hold Me Tight - Sue Johnson
-Mating in Captivity - Esther Perel
-Conscious Uncoupling - Katherine Thomas
-Attached - Amir Levine
-Come as you are - Emily Nagoski
-Co - Dependent No More - Melody Beattie
-Facing Co - Dependency - Pia Melody
-The Wizard of Oz & Other Narcissists I knew - Eleanor Payson
-Will I Ever Be Good Enough - Karyl McBride
-Parenting
-The Whole Brain Child - Daniel Seigel
-The Awakened Family - Shafali Tsabary
-How We Love Our Kids - Milan & Kay Yerkovich
-The Child Whisperer - Carol Tuttle
-The Spirited Child - Mary Kurcinka
-Trauma Proofing Your Kids - Peter Levine and Maggie Kline
-Love & Logic - Jim Fay & Charles Fay
-Emotional health
-The Gifts of Imperfection - Brene Brown
-The Wild Edge of Sorrow - Francis Weller
-How to Do the Work - Nicole LePera
-Women Who Run with the Wolves - Clarissa Pinkola Estes
-Letting Go - David Hawkins
-Emotional Agility - Susan David
-The Highly Sensitive Person - Elaine Aron
-Energetic Boundaries - Cindi Dale
-Empath's Survival Guide - Judith Orloff
-Cost and Info
-Insurance: I am an out - of - network provider and you may be reimbursed in full or in part.I provide an invoice or receipt that you can submit for out - of - network reimbursement.A good way to start is to see if your plan offers any out - of - network benefits and at what percent the plan covers(so for example, if your weekly therapy cost is $250 and your insurance offers 80 % out - of - network reimbursement, then your cost after they reimburse you would be $50.00 per session).
-Rates: $250(sliding scale $250 - $155 income dependent)
-Payment - Cash, check, venmo, zelle, and all major credit cards accepted for payment.
-    Teletherapy - I offer in -person sessions and virtual sessions for New York residents only.I use a secure HIPAA platform to conduct these video sessions which you can access on your computer, tablet, or phone.
-
-        Contact
-Alexandra de Waal, Psy.D.
-    p. 646 - 283 - 3561
-e.dr.alexandradewaal@gmail.com
-Office: 48 Burd Street Suite 206 Nyack, NY 10960
-
-
-
-
 }
+
