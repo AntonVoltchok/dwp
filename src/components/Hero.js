@@ -3,7 +3,7 @@ import '../styles/hero.scss';
 import { useEffect } from 'react';
 import { initParallax, destroyParallax } from '../utils/parallax';
 import { useIsMobile } from '../utils/device';
-import bannerImg from '../assets/herobanner.png';
+import bannerImg from '../assets/heroBanner.jpg';
 
 const Hero = () => {
     const isMobile = useIsMobile();

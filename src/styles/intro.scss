@@ -1,7 +1,7 @@
 @import "./mixins";
 
 .office-img-mb {
-    background-image: url('../assets/office.png');
+    background-image: url('../assets/office.jpg');
     width: 100%;
     height: 250px;
     background-position: center;
@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0.5rem 1.5rem 20rem;
+    padding: 0.5rem 1.5rem 5rem;
     .explore-content-mb {
         padding: 1rem 0;
     }
@@ -55,6 +55,22 @@
 
 // Desktop styles
 
+.quote-line {
+    width: 100%;
+    max-width: 175px;
+    min-width: 80px;
+    border-top: 1px solid rgba(255,255,255,0.65);
+    margin-top: -2rem;
+}
+
+.quote-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 0 .5rem;
+}
+
 .explore-section {
     background-color: #bc954e;
     color: #fff;
@@ -65,18 +81,19 @@
     flex-direction: column;
     @include desktopContentPadding;
     padding-bottom: 3rem;
+
         .explore-content {
             padding: 1rem 4rem 1rem 0;
-    width: 80%;
+            width: 80%;
         }
         .quote {
-            width: 60vh;
+            width: 52vh;
             font-family: "IBMPlexSerif-Italic";
             font-size: 18px;
             font-weight: 400;
             letter-spacing: 0.04rem;
             text-align: left;
-            padding: 3rem 0 0;
+            padding: 2rem 0 0;
             p {
                 text-align: center;
             } 
@@ -86,13 +103,19 @@
         align-items: center;
         justify-content: center;
         .office-img {
-            background-image: url('../assets/office.png');
+            background-image: url('../assets/office.jpg');
             width: 70%;
             height: 280px;
             background-position: center;
             background-size: cover;
-            corner-bottom-left-shape: bevel;
-            border-bottom-left-radius: 35px;
+            margin-top: 1rem;
+            clip-path: polygon(
+                0 0,           /* Top-left corner */
+                100% 0,        /* Top-right corner */
+                100% 100%,     /* Bottom-right corner */
+                var(--bevel-size, 40px) 100%, /* Start of the bevel */
+                0 calc(100% - var(--bevel-size, 40px))  /* End of the bevel */
+              )
         }
     }
     
