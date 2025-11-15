@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0.5rem 1.5rem 3rem;
+    padding: 0.5rem 1.5rem 10rem;
     .explore-content-mb {
         padding: 1rem 0;
     }
@@ -26,7 +26,7 @@
     width: 90vw;
     background: #FFF1D9;
     border-radius: 5px;
-    margin-top: -85px;
+    margin-top: -70px;
     box-shadow: 0px 7px 16px -2px hsla(0, 0%, 0%, 0.47);
     position: relative;
     z-index: 100;
@@ -39,6 +39,11 @@
     h4 {
         padding: 8px 32px 0;
         text-align: left;
+        font-family: "IBMPlexSerif-Italic";
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.04rem;
     }
     p {
         text-align: right;
