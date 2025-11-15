@@ -16,23 +16,23 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0.5rem 1.5rem 10rem;
+    padding: 0.5rem 1.5rem 20rem;
     .explore-content-mb {
         padding: 1rem 0;
     }
 }
 
 .quote-card-mb {
-    width: 90vw;
-    background: #FFF1D9;
+    background: #fff0d4;
     border-radius: 5px;
+    box-shadow: 0 7px 16px -2px #00000014;
+    color: #8a6a47;
     margin-top: -70px;
-    box-shadow: 0px 7px 16px -2px hsla(0, 0%, 0%, 0.47);
     position: relative;
+    width: 90vw;
     z-index: 100;
-    color: #8A6A47;
     font-family: "IBMPlexSerif-Italic";
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.04rem;
     
