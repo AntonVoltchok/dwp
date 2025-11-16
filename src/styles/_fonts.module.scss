@@ -1,6 +1,12 @@
 // Centralized font-face declarations
 
 @font-face {
+  font-family: "Lato-Regular";
+  src: local("Lato-Regular"), url("../assets/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "IBMPlexSerif-Italic";
   src: local("IBMPlexSerif-Italic"), url("../assets/IBMPlexSerif-Italic.ttf") format("truetype");
   font-weight: 400;
@@ -26,3 +32,5 @@
   src: local("IBMPlexSerif-Regular"), url("../assets/IBMPlexSerif-Regular.ttf") format("truetype");
   font-weight: 400;
 }
+
+

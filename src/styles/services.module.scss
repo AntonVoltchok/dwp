@@ -9,7 +9,7 @@
   min-height: 60vh;
   background-image: url('../assets/services.jpg');
   width: auto;
-  background-position: center;
+  background-position: right;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -45,6 +45,7 @@
 
   .servicesContainer {
     @include desktopContentPadding;
+    background-image: url('../assets/services.jpg');
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
