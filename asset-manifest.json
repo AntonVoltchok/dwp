@@ -1,23 +1,28 @@
 {
   "files": {
-    "main.css": "/dwp/static/css/main.1e6d0b55.css",
-    "main.js": "/dwp/static/js/main.eeabc1c4.js",
+    "main.css": "/dwp/static/css/main.1c819b34.css",
+    "main.js": "/dwp/static/js/main.b653d8ef.js",
     "static/js/453.8c2fd068.chunk.js": "/dwp/static/js/453.8c2fd068.chunk.js",
+    "static/media/treatmentBg.jpg": "/dwp/static/media/treatmentBg.bd9aae7f05808fb5af10.jpg",
     "static/media/heroBanner.jpg": "/dwp/static/media/heroBanner.5c1349482853848ac6de.jpg",
+    "static/media/treatmentBgMb.jpg": "/dwp/static/media/treatmentBgMb.1a08bb8037c9760754fc.jpg",
     "static/media/heroBannerMb.jpg": "/dwp/static/media/heroBannerMb.91145283fb16a571f1a1.jpg",
     "static/media/IBMPlexSerif-Italic.ttf": "/dwp/static/media/IBMPlexSerif-Italic.3e1ad4d0e1dc210e36a6.ttf",
     "static/media/Raleway-ExtraLight.ttf": "/dwp/static/media/Raleway-ExtraLight.3ba73fc888c21b510ae1.ttf",
     "static/media/IBMPlexSerif-Regular.ttf": "/dwp/static/media/IBMPlexSerif-Regular.7447dec55614fbae35e2.ttf",
     "static/media/office.jpg": "/dwp/static/media/office.a26a82b6b431980340ac.jpg",
-    "static/media/services.jpg": "/dwp/static/media/services.567da7874f9364d7bf51.jpg",
+    "static/media/services.jpg": "/dwp/static/media/services.20cf76e0b2d7e9d5dba9.jpg",
+    "static/media/Lato-Regular.ttf": "/dwp/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
     "static/media/JosefinSans-Light.ttf": "/dwp/static/media/JosefinSans-Light.82f56d62b11fe2823b47.ttf",
+    "static/media/logo.svg": "/dwp/static/media/logo.4ae2e3fd6e2fd355f715906c531c645d.svg",
     "index.html": "/dwp/index.html",
-    "main.1e6d0b55.css.map": "/dwp/static/css/main.1e6d0b55.css.map",
-    "main.eeabc1c4.js.map": "/dwp/static/js/main.eeabc1c4.js.map",
+    "static/media/menuIcon.svg": "/dwp/static/media/menuIcon.ebf1e088a4008237fe5b36d1cdc77944.svg",
+    "main.1c819b34.css.map": "/dwp/static/css/main.1c819b34.css.map",
+    "main.b653d8ef.js.map": "/dwp/static/js/main.b653d8ef.js.map",
     "453.8c2fd068.chunk.js.map": "/dwp/static/js/453.8c2fd068.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e6d0b55.css",
-    "static/js/main.eeabc1c4.js"
+    "static/css/main.1c819b34.css",
+    "static/js/main.b653d8ef.js"
   ]
 }
