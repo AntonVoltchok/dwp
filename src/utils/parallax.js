@@ -1,9 +1,13 @@
 // Lightweight parallax helper that adjusts background-position on scroll
-// Usage: import { initParallax, destroyParallax } from '../utils/parallax';
+// Usage: import { initParallax, destroyParallax, initHorizontalParallax, destroyHorizontalParallax } from '../utils/parallax';
 
 let rafId = null;
 let handler = null;
 let bgEl = null;
+
+// Horizontal parallax instance variables (separate from vertical)
+let horizontalRafId = null;
+let horizontalHandler = null;
 
 export function initParallax(selector = '.hero-container', speed = 0.5) {
   if (typeof window === 'undefined') return;
@@ -59,4 +63,74 @@ export function destroyParallax() {
   rafId = null;
   handler = null;
   bgEl = null;
+}
+
+// Horizontal parallax function - moves background image horizontally as user scrolls
+export function initHorizontalParallax(selector = '.services-container', speed = 0.3) {
+  if (typeof window === 'undefined') return;
+
+  const el = document.querySelector(selector);
+  if (!el) return;
+
+  function onScroll() {
+    if (horizontalRafId) cancelAnimationFrame(horizontalRafId);
+    horizontalRafId = requestAnimationFrame(() => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const elHeight = rect.height || el.offsetHeight;
+      const elementTop = rect.top;
+      const elementBottom = rect.bottom;
+
+      // Calculate progress as element scrolls through viewport
+      // Progress: 0 when element top enters viewport, 1 when element bottom leaves viewport
+      let progress = 0;
+      
+      // Only calculate parallax when element is in or entering viewport
+      if (elementBottom > 0 && elementTop < windowHeight) {
+        // Element is in viewport
+        // Calculate how much of the element + viewport height has been scrolled
+        const scrollRange = windowHeight + elHeight;
+        // Distance scrolled: from when top enters viewport (top = windowHeight) to when bottom leaves (bottom = 0)
+        const scrolledDistance = windowHeight - elementTop;
+        // Normalize to 0-1 range
+        progress = Math.max(0, Math.min(1, scrolledDistance / scrollRange));
+      } else if (elementTop >= windowHeight) {
+        // Element hasn't entered viewport yet - keep at start position
+        progress = 0;
+      } else if (elementBottom <= 0) {
+        // Element has completely left viewport - keep at end position
+        progress = 1;
+      }
+
+      // Calculate horizontal background position
+      // Start from right (100%) and move to left (0%) as user scrolls down
+      const startPosition = 100; // Start at right
+      const endPosition = 0; // End at left
+      // Apply speed multiplier to control movement range
+      const movementRange = (startPosition - endPosition) * speed;
+      const currentPosition = startPosition - (progress * movementRange);
+      
+      // Clamp the position between 0% and 100%
+      const clampedPosition = Math.max(0, Math.min(100, currentPosition));
+      
+      el.style.backgroundPositionX = `${clampedPosition}%`;
+    });
+  }
+
+  horizontalHandler = onScroll;
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  // initialize
+  onScroll();
+}
+
+export function destroyHorizontalParallax() {
+  if (typeof window === 'undefined') return;
+  if (horizontalHandler) {
+    window.removeEventListener('scroll', horizontalHandler);
+    window.removeEventListener('resize', horizontalHandler);
+  }
+  if (horizontalRafId) cancelAnimationFrame(horizontalRafId);
+  horizontalRafId = null;
+  horizontalHandler = null;
 }

@@ -5,11 +5,11 @@
   @include lineBase;
 }
 
-.servicesContainer {
+.treatmentContainer {
   min-height: 50vh;
-  background-image: url('../assets/services.jpg');
+  background-image: url('../assets/treatmentBgMb.jpg');
   width: auto;
-  background-position: left;
+  background-position: right;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -43,10 +43,11 @@
     padding: 0.5rem 0 0.5rem 3rem;
   }
 
-  .servicesContainer {
+  .treatmentContainer {
     @include desktopContentPadding;
-    background-image: url('../assets/services.jpg');
+    background-image: url('../assets/treatmentBg.jpg');
     padding-top: 4rem;
     padding-bottom: 0rem;
+    background-color: rgb(100, 100, 135)
   }
 }

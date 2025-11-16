@@ -2,7 +2,7 @@ import styles from '../styles/App.module.scss';
 import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import Services from '../components/Services';
-import { useIsMobile } from '../utils/device';
+import Treatment from '../components/Treatment';
 
 const Home = () => {
 
@@ -11,6 +11,7 @@ const Home = () => {
       <Hero />
       <Intro /> 
       <Services />
+      <Treatment />
     </div>
   );
 }
