@@ -1,0 +1,51 @@
+@import "./mixins.module";
+
+.servicesLine {
+  width: 70%;
+  @include lineBase;
+}
+
+.servicesContainer {
+  min-height: 60vh;
+  background-image: url('../assets/services.jpg');
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 1.5rem 4rem;
+  @include mobileContentPadding;
+}
+
+.servicesContent {
+  margin: 50px 0;
+}
+
+.service {
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.serviceTitle {
+  font-family: JosefinSans-Light;
+  font-size: 30px;
+  padding-bottom: 2rem;
+}
+
+.serviceDesc {
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .serviceDesc {
+    padding: 0.5rem 0 0.5rem 3rem;
+  }
+
+  .servicesContainer {
+    @include desktopContentPadding;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

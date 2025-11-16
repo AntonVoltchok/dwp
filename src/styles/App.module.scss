@@ -1,0 +1,57 @@
+@import "./fonts.module";
+@import "./mixins.module";
+
+.app {
+  @include baseFont;
+  width: 100%;
+  position: relative;
+}
+
+.homeContainer {
+  width: 100%;
+}
+
+.lineContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .line {
+    width: 30%;
+    @include lineBase;
+  }
+  
+  .lineHeading {
+    width: 30%;
+    padding: 0 5%;
+    text-align: center;
+    font-family: "Railway-Light";
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+.lineContainerMb {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+  .lineHeadingMb {
+    text-align: center;
+    font-family: "Railway-Light";
+    color: #fff;
+    font-size: 1.8rem;
+    letter-spacing: 0.005rem;
+    text-transform: uppercase;
+    padding-right: 1.5rem;
+  }
+  
+  .lineMb {
+    width: 100%;
+    min-width: 50px;
+    max-width: 50vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.65);
+  }
+}

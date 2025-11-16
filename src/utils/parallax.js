@@ -3,12 +3,16 @@
 
 let rafId = null;
 let handler = null;
+let bgEl = null;
 
 export function initParallax(selector = '.hero-container', speed = 0.5) {
   if (typeof window === 'undefined') return;
 
   const el = document.querySelector(selector);
   if (!el) return;
+
+  // Cache the background element - search for any child with data-parallax-bg attribute
+  bgEl = el.querySelector('[data-parallax-bg]');
 
   // on mobile browsers background-attachment: fixed is often ignored/torn; use JS fallback
   function onScroll() {
@@ -25,7 +29,6 @@ export function initParallax(selector = '.hero-container', speed = 0.5) {
       const normalized = Math.max(-1, Math.min(1, (elCenter - viewportCenter) / maxDistance));
 
       // If there's an absolutely-positioned inner background, use transform for smoother animation
-      const bgEl = el.querySelector('.hero-bg');
       if (bgEl) {
         const bgHeight = bgEl.offsetHeight || bgEl.getBoundingClientRect().height;
         const maxTranslate = Math.max(0, bgHeight - elHeight);
@@ -55,4 +58,5 @@ export function destroyParallax() {
   if (rafId) cancelAnimationFrame(rafId);
   rafId = null;
   handler = null;
+  bgEl = null;
 }

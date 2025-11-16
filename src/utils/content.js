@@ -1,9 +1,9 @@
 export default {
     title: "De Waal Psychology",
     subtitle: "THIS ONE IS MANUAL CHANGE LET ME KNOW IF ITS DIFFERENT FROM: Psychotherapy and Assessment Services",
-    quote: "“We may not be responsible for the world that created our minds, but we can take responsibility for the mind with which we create our world.",
-    quoteAuthor: "Dr. Gabor Mate",
-    description: "Welcome to De Waal Psychology. I work with individuals through a holistic and creative therapeutic lens. I aspire to develop a connection with my clients by way of curiosity and compassion in order to build trust and enhance clients' unique sense of self. With an integrative approach to treatment, I utilize components from several different therapeutic modalities in order to meet the unique needs of the individual. In addition to psychotherapy, De Waal Psychology offers an array of services, including intensive trauma-informed treatment, diagnostic and forensic assessment and consultation.",
+    quote: "“We may not be responsible for the world that created our minds, but we can take responsibility for the mind with which we create our world.“",
+    quoteAuthor: "- Dr. Gabor Mate",
+    description: "Welcome to De Waal Psychology. I work with individuals through a holistic and creative therapeutic lens. I aspire to develop a connection with my clients by way of curiosity and compassion in order to build trust and enhance clients' unique sense of self. With an integrative approach to treatment, I utilize components from several different therapeutic modalities in order to meet the unique needs of the individual.",
     services: [
         {
             title: "Individual therapy",

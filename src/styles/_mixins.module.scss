@@ -12,6 +12,11 @@
   padding: 0 18vw;
 }
 
+@mixin mobileContentPadding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 @mixin lineBase {
   border-top: 1px solid rgba(255,255,255,0.65);
 }

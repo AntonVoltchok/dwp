@@ -1,43 +1,42 @@
 import content from '../utils/content';
-import '../styles/intro.scss';
+import styles from '../styles/intro.module.scss';
 import { useIsMobile } from '../utils/device';
 
 const Intro = () => {
-    const isMobile = useIsMobile();
-    const line = <div className='quote-line' />
-    const contentMobile = (
-        <div className='explore-section-mb'>
-            <div className='quote-card-mb'>
-                <h4>{content.quote}</h4>
-                <p>{content.quoteAuthor}</p>
-            </div>
-            <div className='explore-content-mb'>
-                <p>{content.description}</p>
-            </div>
-            <div className='office-img-mb' aria-hidden='true' />
+  const isMobile = useIsMobile();
+  const line = <div className={styles.quoteLine} />
+  const contentMobile = (
+    <div className={styles.exploreSectionMb}>
+      <div className={styles.exploreContentMb}>
+        <p>{content.description}</p>
+      </div>
+      <div className={styles.officeImgMb} aria-hidden='true' />
+      <div className={styles.quoteCardMb}>
+        <h4>{content.quote}</h4>
+        <p>{content.quoteAuthor}</p>
+      </div>
+    </div>
+  );
+  const contentDesktop = (
+    <div className={styles.exploreSection}>
+      <div className={styles.quoteContainer}>
+        {line}
+        <div className={styles.quote}>
+          <div>{content.quote}</div>
+          <p>{content.quoteAuthor}</p>
         </div>
-    );
-    const contentDesktop = (
-        <div className='explore-section'>
-            <div className='quote-container'>
-                {line}
-                <div className='quote'>
-                    <div>{content.quote}</div>
-                    <p>{content.quoteAuthor}</p>
-                </div>
-                {line}
-            </div>
-            <div className='content-img-container'>
-                <div className='explore-content'>
-                    <p>{content.description}</p>
-                </div>
-                <div className='office-img' aria-hidden='true' />
-            </div>
-
+        {line}
+      </div>
+      <div className={styles.contentImgContainer}>
+        <div className={styles.exploreContent}>
+          <p>{content.description}</p>
         </div>
-    )
+        <div className={styles.officeImg} aria-hidden='true' />
+      </div>
+    </div>
+  )
 
-    return isMobile ? contentMobile : contentDesktop;
+  return isMobile ? contentMobile : contentDesktop;
 }
 
 export default Intro;

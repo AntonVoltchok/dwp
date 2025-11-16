@@ -1,26 +1,25 @@
 import content from '../utils/content';
-import '../styles/services.scss';
+import styles from '../styles/services.module.scss';
 import Heading from './Heading';
-// import { useIsMobile } from '../utils/device';
 
 const Services = () => {
-    // const isMobile = useIsMobile();
-
-    const serviceBlock = (obj) => {
-        return <div className='service'>
-                <div className='service-title'>{obj.title}</div>
-                <div className='service-desc'>{obj.description}</div>
-        </div>
-    }
-    
+  const serviceBlock = (obj) => {
     return (
-        <div className='services-container'>
-            <Heading>Services</Heading>
-            <div className='services-content'>
-                {content?.services?.map(service => serviceBlock(service))}
-            </div>
-        </div>
+      <div key={obj.title} className={styles.service}>
+        <div className={styles.serviceTitle}>{obj.title}</div>
+        <div className={styles.serviceDesc}>{obj.description}</div>
+      </div>
     );
+  }
+  
+  return (
+    <div className={styles.servicesContainer}>
+      <Heading>Services</Heading>
+      <div className={styles.servicesContent}>
+        {content?.services?.map(service => serviceBlock(service))}
+      </div>
+    </div>
+  );
 }
-
+// a48a6a
 export default Services;

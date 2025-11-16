@@ -1,0 +1,125 @@
+@import "./mixins.module";
+
+.officeImgMb {
+  background-image: url('../assets/office.jpg');
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+}
+
+.exploreSectionMb {
+  background-color: #bc954e;
+  color: #fff;
+  font-size: 16px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem 1.5rem 5rem;
+
+  .exploreContentMb {
+    padding: 1rem 0;
+  }
+}
+
+.quoteCardMb {
+  background: #cdab6b;
+  border-radius: 5px;
+  box-shadow: 0 7px 16px -2px rgba(0, 0, 0, 0.0784313725);
+  color: #8a6a47;
+  margin-top: 32px;
+  position: relative;
+  width: 90vw;
+  z-index: 100;
+  font-family: "IBMPlexSerif-Italic";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
+  color: #ffffff;
+  margin-bottom: -160px;
+  margin-top: 50px;
+
+  h4 {
+    padding: 8px 20px 0;
+    text-align: left;
+    font-family: "IBMPlexSerif-Italic";
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+  }
+
+  p {
+    text-align: right;
+    margin: -15px 30px 0 0;
+    padding-bottom: 21px;
+  }
+}
+
+.quoteLine {
+  width: 100%;
+  max-width: 135px;
+  min-width: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.65);
+  margin-top: -2rem;
+}
+
+.quoteContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.exploreSection {
+  background-color: #bc954e;
+  color: #fff;
+  font-size: 16px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include desktopContentPadding;
+  padding-bottom: 3rem;
+
+  .exploreContent {
+    padding: 1rem 4rem 1rem 0;
+    width: 80%;
+  }
+
+  .quote {
+    width: 52vh;
+    font-family: "IBMPlexSerif-Italic";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    text-align: left;
+    padding: 2rem 2rem 0;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .contentImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .officeImg {
+      background-image: url('../assets/office.jpg');
+      width: 70%;
+      height: 280px;
+      background-position: center;
+      background-size: cover;
+      margin-top: 1rem;
+      clip-path: polygon(0 0,
+          100% 0,
+          100% 100%,
+          var(--bevel-size, 40px) 100%,
+          0 calc(100% - var(--bevel-size, 40px)));
+    }
+  }
+}
