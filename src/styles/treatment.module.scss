@@ -1,6 +1,6 @@
 @import "./mixins.module";
 
-.servicesLine {
+.treatmentsLine {
   width: 70%;
   @include lineBase;
 }
@@ -14,32 +14,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 1.5rem 4rem;
+  padding: 5rem 1.5rem 4rem;
   @include mobileContentPadding;
 }
 
-.servicesContent {
+.treatmentsContent {
   margin: 22px 0 32px;
 }
 
-.service {
-  padding: 1rem 0;
-  color: #fff;
+.treatment {
+    color: #fff;
+    background-color: hsl(90deg 2% 50% / 62%);
+    margin-bottom: 2rem;
+    padding: 1.25rem;
 }
 
-.serviceTitle {
+.treatmentTitle {
   font-family: JosefinSans-Light;
   font-size: 30px;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
-.serviceDesc {
-  border-left: 1px solid rgba(255, 255, 255, 0.7);
-  padding: 0.5rem 0 0.5rem 1rem;
+.treatmentDesc {
+  padding: 0 0 1rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .serviceDesc {
+  .treatmentDesc {
     padding: 0.5rem 0 0.5rem 3rem;
   }
 

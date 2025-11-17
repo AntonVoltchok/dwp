@@ -1,5 +1,5 @@
 // Lightweight parallax helper that adjusts background-position on scroll
-// Usage: import { initParallax, destroyParallax, initHorizontalParallax, destroyHorizontalParallax } from '../utils/parallax';
+// Usage: import { initParallax, destroyParallax, initHorizontalParallax, destroyHorizontalParallax, initDiagonalParallax, destroyDiagonalParallax } from '../utils/parallax';
 
 let rafId = null;
 let handler = null;
@@ -8,6 +8,10 @@ let bgEl = null;
 // Horizontal parallax instance variables (separate from vertical)
 let horizontalRafId = null;
 let horizontalHandler = null;
+
+// Diagonal parallax instance variables
+let diagonalRafId = null;
+let diagonalHandler = null;
 
 export function initParallax(selector = '.hero-container', speed = 0.5) {
   if (typeof window === 'undefined') return;
@@ -133,4 +137,82 @@ export function destroyHorizontalParallax() {
   if (horizontalRafId) cancelAnimationFrame(horizontalRafId);
   horizontalRafId = null;
   horizontalHandler = null;
+}
+
+// Diagonal parallax function - moves background image diagonally from bottom left to top right
+export function initDiagonalParallax(selector = '.treatment-container', speed = 0.3) {
+  if (typeof window === 'undefined') return;
+
+  const el = document.querySelector(selector);
+  if (!el) return;
+
+  function onScroll() {
+    if (diagonalRafId) cancelAnimationFrame(diagonalRafId);
+    diagonalRafId = requestAnimationFrame(() => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const elHeight = rect.height || el.offsetHeight;
+      const elementTop = rect.top;
+      const elementBottom = rect.bottom;
+
+      // Calculate progress as element scrolls through viewport
+      // Progress: 0 when element top enters viewport, 1 when element bottom leaves viewport
+      let progress = 0;
+      
+      // Only calculate parallax when element is in or entering viewport
+      if (elementBottom > 0 && elementTop < windowHeight) {
+        // Element is in viewport
+        // Calculate how much of the element + viewport height has been scrolled
+        const scrollRange = windowHeight + elHeight;
+        // Distance scrolled: from when top enters viewport (top = windowHeight) to when bottom leaves (bottom = 0)
+        const scrolledDistance = windowHeight - elementTop;
+        // Normalize to 0-1 range
+        progress = Math.max(0, Math.min(1, scrolledDistance / scrollRange));
+      } else if (elementTop >= windowHeight) {
+        // Element hasn't entered viewport yet - keep at start position
+        progress = 0;
+      } else if (elementBottom <= 0) {
+        // Element has completely left viewport - keep at end position
+        progress = 1;
+      }
+
+      // Calculate diagonal background position
+      // Horizontal: from left (0%) to right (100%)
+      // Vertical: from bottom (100%) to top (0%)
+      const startX = 0; // Start at left
+      const endX = 100; // End at right
+      const startY = 100; // Start at bottom
+      const endY = 0; // End at top
+      
+      // Apply speed multiplier to control movement range
+      const movementRangeX = (endX - startX) * speed;
+      const movementRangeY = (endY - startY) * speed;
+      
+      const currentX = startX + (progress * movementRangeX);
+      const currentY = startY + (progress * movementRangeY);
+      
+      // Clamp the positions between 0% and 100%
+      const clampedX = Math.max(0, Math.min(100, currentX));
+      const clampedY = Math.max(0, Math.min(100, currentY));
+      
+      el.style.backgroundPosition = `${clampedX}% ${clampedY}%`;
+    });
+  }
+
+  diagonalHandler = onScroll;
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  // initialize
+  onScroll();
+}
+
+export function destroyDiagonalParallax() {
+  if (typeof window === 'undefined') return;
+  if (diagonalHandler) {
+    window.removeEventListener('scroll', diagonalHandler);
+    window.removeEventListener('resize', diagonalHandler);
+  }
+  if (diagonalRafId) cancelAnimationFrame(diagonalRafId);
+  diagonalRafId = null;
+  diagonalHandler = null;
 }
