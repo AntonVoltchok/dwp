@@ -4,6 +4,8 @@ import Intro from '../components/Intro';
 import Services from '../components/Services';
 import Treatment from '../components/Treatment';
 import Nav from '../components/Nav';
+import AboutMe from '../components/AboutMe'
+import Contact from '../components/Contact';
 
 const Home = () => {
 
@@ -14,6 +16,8 @@ const Home = () => {
       <Intro /> 
       <Services />
       <Treatment />
+      <AboutMe />
+      <Contact />
     </div>
   );
 }

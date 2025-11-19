@@ -1,0 +1,43 @@
+@import "./mixins.module";
+
+.contactSection {
+  min-height: 40vh;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.contactDetails {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.contactLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contactAddress {
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .contactSection {
+    padding: 5rem 0;
+    @include desktopContentPadding;
+  }
+}
+

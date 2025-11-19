@@ -13,11 +13,71 @@ let horizontalHandler = null;
 let diagonalRafId = null;
 let diagonalHandler = null;
 
+function hasReducedMotionPreference() {
+  if (typeof window === 'undefined' || !window.matchMedia) return false;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+function prefersLightweightParallax() {
+  if (typeof window === 'undefined' || !window.matchMedia) return false;
+  const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+  const narrowViewport = window.innerWidth <= 768;
+  return coarsePointer || narrowViewport;
+}
+
+function getEffectiveSpeed(baseSpeed) {
+  if (prefersLightweightParallax()) {
+    return baseSpeed * 0.65;
+  }
+  return baseSpeed;
+}
+
+const DEFAULT_THROTTLE = 16;
+const LIGHTWEIGHT_THROTTLE = 32;
+
+function getThrottleDelay() {
+  return prefersLightweightParallax() ? LIGHTWEIGHT_THROTTLE : DEFAULT_THROTTLE;
+}
+
+function now() {
+  if (typeof performance !== 'undefined' && performance.now) {
+    return performance.now();
+  }
+  return Date.now();
+}
+
+function throttle(fn, delay = DEFAULT_THROTTLE) {
+  let lastCall = 0;
+  let timeoutId = null;
+
+  return (...args) => {
+    const timestamp = now();
+    const remaining = delay - (timestamp - lastCall);
+
+    if (remaining <= 0) {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+      }
+      lastCall = timestamp;
+      fn(...args);
+    } else if (!timeoutId) {
+      timeoutId = setTimeout(() => {
+        lastCall = now();
+        timeoutId = null;
+        fn(...args);
+      }, remaining);
+    }
+  };
+}
+
 export function initParallax(selector = '.hero-container', speed = 0.5) {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || hasReducedMotionPreference()) return;
 
   const el = document.querySelector(selector);
   if (!el) return;
+
+  const effectiveSpeed = getEffectiveSpeed(speed);
 
   // Cache the background element - search for any child with data-parallax-bg attribute
   bgEl = el.querySelector('[data-parallax-bg]');
@@ -41,22 +101,22 @@ export function initParallax(selector = '.hero-container', speed = 0.5) {
         const bgHeight = bgEl.offsetHeight || bgEl.getBoundingClientRect().height;
         const maxTranslate = Math.max(0, bgHeight - elHeight);
         // translate in px, invert normalized so background moves slower than foreground
-        const translate = -normalized * maxTranslate * speed;
+        const translate = -normalized * maxTranslate * effectiveSpeed;
         bgEl.style.transform = `translate3d(0, ${translate}px, 0)`;
       } else {
         // fallback to percentage-based background-position when no inner bg element
-        let posPercent = 50 + normalized * speed * 50;
+        let posPercent = 50 + normalized * effectiveSpeed * 50;
         posPercent = Math.max(0, Math.min(100, posPercent));
         el.style.backgroundPosition = `center ${posPercent}%`;
       }
     });
   }
 
-  handler = onScroll;
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
+  handler = throttle(onScroll, getThrottleDelay());
+  window.addEventListener('scroll', handler, { passive: true });
+  window.addEventListener('resize', handler);
   // initialize
-  onScroll();
+  handler();
 }
 
 export function destroyParallax() {
@@ -71,10 +131,12 @@ export function destroyParallax() {
 
 // Horizontal parallax function - moves background image horizontally as user scrolls
 export function initHorizontalParallax(selector = '.services-container', speed = 0.3) {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || hasReducedMotionPreference()) return;
 
   const el = document.querySelector(selector);
   if (!el) return;
+
+  const effectiveSpeed = getEffectiveSpeed(speed);
 
   function onScroll() {
     if (horizontalRafId) cancelAnimationFrame(horizontalRafId);
@@ -111,7 +173,7 @@ export function initHorizontalParallax(selector = '.services-container', speed =
       const startPosition = 100; // Start at right
       const endPosition = 0; // End at left
       // Apply speed multiplier to control movement range
-      const movementRange = (startPosition - endPosition) * speed;
+      const movementRange = (startPosition - endPosition) * effectiveSpeed;
       const currentPosition = startPosition - (progress * movementRange);
       
       // Clamp the position between 0% and 100%
@@ -121,11 +183,11 @@ export function initHorizontalParallax(selector = '.services-container', speed =
     });
   }
 
-  horizontalHandler = onScroll;
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
+  horizontalHandler = throttle(onScroll, getThrottleDelay());
+  window.addEventListener('scroll', horizontalHandler, { passive: true });
+  window.addEventListener('resize', horizontalHandler);
   // initialize
-  onScroll();
+  horizontalHandler();
 }
 
 export function destroyHorizontalParallax() {
@@ -141,10 +203,12 @@ export function destroyHorizontalParallax() {
 
 // Diagonal parallax function - moves background image diagonally from bottom left to top right
 export function initDiagonalParallax(selector = '.treatment-container', speed = 0.3) {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || hasReducedMotionPreference()) return;
 
   const el = document.querySelector(selector);
   if (!el) return;
+
+  const effectiveSpeed = getEffectiveSpeed(speed);
 
   function onScroll() {
     if (diagonalRafId) cancelAnimationFrame(diagonalRafId);
@@ -185,8 +249,8 @@ export function initDiagonalParallax(selector = '.treatment-container', speed = 
       const endY = 0; // End at top
       
       // Apply speed multiplier to control movement range
-      const movementRangeX = (endX - startX) * speed;
-      const movementRangeY = (endY - startY) * speed;
+      const movementRangeX = (endX - startX) * effectiveSpeed;
+      const movementRangeY = (endY - startY) * effectiveSpeed;
       
       const currentX = startX + (progress * movementRangeX);
       const currentY = startY + (progress * movementRangeY);
@@ -199,11 +263,11 @@ export function initDiagonalParallax(selector = '.treatment-container', speed = 
     });
   }
 
-  diagonalHandler = onScroll;
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
+  diagonalHandler = throttle(onScroll, getThrottleDelay());
+  window.addEventListener('scroll', diagonalHandler, { passive: true });
+  window.addEventListener('resize', diagonalHandler);
   // initialize
-  onScroll();
+  diagonalHandler();
 }
 
 export function destroyDiagonalParallax() {

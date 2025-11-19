@@ -20,7 +20,7 @@ const Treatment = () => {
   }
 
   return (
-    <div className={styles.treatmentContainer}>
+    <div className={styles.treatmentContainer} id="treatment">
       <Heading>Treatment</Heading>
       <div className={styles.treatmentsContent}>
         {content?.treatment?.map(treatment => treatmentBlock(treatment))}

@@ -21,7 +21,7 @@ const Services = () => {
   }
   
   return (
-    <div className={styles.servicesContainer}>
+    <div className={styles.servicesContainer} id="services">
       <Heading>Services</Heading>
       <div className={styles.servicesContent}>
         {content?.services?.map(service => serviceBlock(service))}

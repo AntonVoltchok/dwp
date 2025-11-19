@@ -16,7 +16,7 @@ const Hero = () => {
   }, [isMobile, styles.heroContainer]);
 
   return (
-    <div className={styles.heroContainer}>
+    <div className={styles.heroContainer} id="home">
 
       {/* absolutely-positioned inner image for transform-based parallax */}
       <div className={styles.heroBg} data-parallax-bg aria-hidden='true'>

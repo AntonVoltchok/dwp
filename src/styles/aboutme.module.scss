@@ -1,0 +1,27 @@
+@import "./mixins.module";
+
+.aboutMeContainer {
+    background-color: #7E827C;
+    color: #fff;
+    min-height: 40vh;
+    padding: 3rem 0 4rem;
+    @include mobileContentPadding;
+}
+
+.aboutSection {
+    padding: 1rem 0rem;
+}
+
+
+@media screen and (min-width: 1000px) {
+  
+    .aboutMeContainer {
+      @include desktopContentPadding;
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+    }
+
+    .aboutSection {
+        padding: 2rem 3rem;
+    }
+  }
