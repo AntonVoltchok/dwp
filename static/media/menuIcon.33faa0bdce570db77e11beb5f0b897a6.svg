@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.8 40.63">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g id="Mobile">
+    <g id="nav">
+      <g id="menu_icon">
+        <line class="cls-1" x1="2" y1="2" x2="58.8" y2="2"/>
+        <line class="cls-1" x1="2" y1="20.07" x2="58.8" y2="20.07"/>
+        <line class="cls-1" x1="2" y1="38.63" x2="58.8" y2="38.63"/>
+      </g>
+    </g>
+  </g>
+</svg>

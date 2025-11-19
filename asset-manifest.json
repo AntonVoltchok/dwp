@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dwp/static/css/main.6f5314a5.css",
-    "main.js": "/dwp/static/js/main.519b1345.js",
+    "main.css": "/dwp/static/css/main.a2a7fbb6.css",
+    "main.js": "/dwp/static/js/main.8d39bac5.js",
     "static/js/453.8c2fd068.chunk.js": "/dwp/static/js/453.8c2fd068.chunk.js",
     "static/media/treatmentBg.jpg": "/dwp/static/media/treatmentBg.bd9aae7f05808fb5af10.jpg",
     "static/media/heroBanner.jpg": "/dwp/static/media/heroBanner.5c1349482853848ac6de.jpg",
@@ -14,15 +14,14 @@
     "static/media/services.jpg": "/dwp/static/media/services.20cf76e0b2d7e9d5dba9.jpg",
     "static/media/Lato-Regular.ttf": "/dwp/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
     "static/media/JosefinSans-Light.ttf": "/dwp/static/media/JosefinSans-Light.82f56d62b11fe2823b47.ttf",
-    "static/media/logo.svg": "/dwp/static/media/logo.4ae2e3fd6e2fd355f715906c531c645d.svg",
     "index.html": "/dwp/index.html",
-    "static/media/menuIcon.svg": "/dwp/static/media/menuIcon.ebf1e088a4008237fe5b36d1cdc77944.svg",
-    "main.6f5314a5.css.map": "/dwp/static/css/main.6f5314a5.css.map",
-    "main.519b1345.js.map": "/dwp/static/js/main.519b1345.js.map",
+    "static/media/menuIcon.svg": "/dwp/static/media/menuIcon.33faa0bdce570db77e11beb5f0b897a6.svg",
+    "main.a2a7fbb6.css.map": "/dwp/static/css/main.a2a7fbb6.css.map",
+    "main.8d39bac5.js.map": "/dwp/static/js/main.8d39bac5.js.map",
     "453.8c2fd068.chunk.js.map": "/dwp/static/js/453.8c2fd068.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f5314a5.css",
-    "static/js/main.519b1345.js"
+    "static/css/main.a2a7fbb6.css",
+    "static/js/main.8d39bac5.js"
   ]
 }
