@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dwp/static/css/main.ab6c56f2.css",
+    "main.css": "/dwp/static/css/main.ce12186c.css",
     "main.js": "/dwp/static/js/main.b4fc2b16.js",
     "static/js/453.8c2fd068.chunk.js": "/dwp/static/js/453.8c2fd068.chunk.js",
     "static/media/treatmentBg.jpg": "/dwp/static/media/treatmentBg.bd9aae7f05808fb5af10.jpg",
@@ -16,12 +16,12 @@
     "static/media/JosefinSans-Light.ttf": "/dwp/static/media/JosefinSans-Light.82f56d62b11fe2823b47.ttf",
     "index.html": "/dwp/index.html",
     "static/media/menuIcon.svg": "/dwp/static/media/menuIcon.33faa0bdce570db77e11beb5f0b897a6.svg",
-    "main.ab6c56f2.css.map": "/dwp/static/css/main.ab6c56f2.css.map",
+    "main.ce12186c.css.map": "/dwp/static/css/main.ce12186c.css.map",
     "main.b4fc2b16.js.map": "/dwp/static/js/main.b4fc2b16.js.map",
     "453.8c2fd068.chunk.js.map": "/dwp/static/js/453.8c2fd068.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab6c56f2.css",
+    "static/css/main.ce12186c.css",
     "static/js/main.b4fc2b16.js"
   ]
 }
