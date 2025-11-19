@@ -24,6 +24,10 @@ export default {
     ],
     treatment: [
         {
+            title: "EMDR",
+            description: "Eye Movement Desensitization and Reprocessing (EMDR) is an integrative psychotherapy approach that has been extensively researched and proven effective for the treatment of trauma. I offer EMDR if deemed appropriate in individual therapy or as a limited series of sessions while working with an outside therapist. To learn more about EMDR, visit www.emdria.org."
+        },
+        {
             title: "Psychodynamic Therapy",
             description: "Psychodynamic therapy is a type of psychotherapy that integrates past experiences with present behavior, offering a comprehensive understanding of an individual’s life history. Over the years, psychodynamic therapy has evolved to emphasize the role of past unresolved conflicts and how they manifest themselves in shaping people's behavior and personality. It has shown to be effective in helping people deal with depression, anxiety, pain, and relationship issues."
         },
@@ -39,14 +43,11 @@ export default {
             title: "Art therapy",
             description: "Engaging in creative expression can access a different part of our brain that encourages growth, awareness, and healing. Art therapy may be utilized to address specific concerns, but the act of creating is therapeutic in itself. Using creative tools in therapy provides a safe and grounding way to express emotions, allowing for deeper self understanding."
         },
-        {
-            title: "Play therapy",
-            description: "Play therapy can be an effective form of treatment when working with children. It is a type of therapy that uses play and creative activities to help children express their thoughts and emotions, and work through challenges."
-        },
-        {
-            title: "EMDR",
-            description: "Eye Movement Desensitization and Reprocessing (EMDR) is an integrative psychotherapy approach that has been extensively researched and proven effective for the treatment of trauma. I offer EMDR if deemed appropriate in individual therapy or as a limited series of sessions while working with an outside therapist. To learn more about EMDR, visit www.emdria.org."
-        }
+        // {
+        //     title: "Play therapy",
+        //     description: "Play therapy can be an effective form of treatment when working with children. It is a type of therapy that uses play and creative activities to help children express their thoughts and emotions, and work through challenges."
+        // },
+
     ],
     aboutMe: {
         firstPart: "I work from an attachment based framework to help identify causes of distress and increase awareness into disruptive patterns or problematic behaviors. Every person deserves to live a life that feels most fulfilling to them. We strive for happiness but sometimes old ways of thinking or behavioral patterns get in the way. We may feel stuck or find ourselves living a life based on the expectations of others or ways that do not feel authentic to our inner being.",

@@ -2,57 +2,6 @@
 
 $heroHeight: 92vh;
 
-
-
-// TODO - temporary move to header component
-
-.logoContainer {
-  position: relative;
-  z-index: 100;
-  width: 32px;
-  position: absolute;
-  top: 2.75rem;
-  left: 1.5rem;
-}
-
-.menuIcon {
-  position: relative;
-  z-index: 100;
-  width: 28px;
-  position: absolute;
-  top: 3.1rem;
-  right: 1.65rem;
-}
-
-.menuContainer {
-  width: 380px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  font-family: "Lato-Regular";
-  font-size: 14px;
-  z-index: 100;
-  position: absolute;
-  top: 100px;
-  right: 1.4vw;
-  div {
-    width: 100px;
-    text-align: left;
-  }
-  div:last-child {
-    margin-left: 14px;
-  }
-  div:first-child {
-    margin-right: -10px;
-  }
-}
-
-
-
-
-
-
 .heroContainer {
   width: 100%;
   position: relative;
@@ -119,19 +68,6 @@ $heroHeight: 92vh;
 
 @media screen and (min-width: 1000px) {
   
-  // TODO - move to new component
-  .logoContainer {
-    position: relative;
-    z-index: 100;
-    width: 38px;
-    position: absolute;
-    top: 75px;
-    left: 4.5vw;
-  }
-  
-
-
-
   .heroText {
     font-size: 4vw;
     z-index: 10;

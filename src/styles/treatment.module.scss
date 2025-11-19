@@ -47,8 +47,28 @@
   .treatmentContainer {
     @include desktopContentPadding;
     background-image: url('../assets/treatmentBg.jpg');
+    background-position: left;
+    background-size: cover;
     padding-top: 4rem;
     padding-bottom: 0rem;
     background-color: rgb(100, 100, 135)
   }
+
+  .treatmentsContent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .treatment {
+    color: #fff;
+    background-color: hsla(90, 2%, 50%, 0.62);
+    padding: 1.25rem;
+    width: 25.5vw;
+    margin: 1rem;
+  }
+
+  .treatmentDesc {
+    padding: 0;
+  }
+
 }

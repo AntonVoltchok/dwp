@@ -20,3 +20,7 @@
 @mixin lineBase {
   border-top: 1px solid rgba(255,255,255,0.65);
 }
+
+@mixin desktopContentWidth {
+  width: calc(100% - 36vw);
+}
