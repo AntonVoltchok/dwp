@@ -1,7 +1,7 @@
 import styles from '../styles/nav.module.scss';
 import { useIsMobile } from '../utils/device';
 import { ReactComponent as MenuIcon } from '../assets/menuIcon.svg';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-v1.png';
 import { useState, useEffect, useRef } from 'react';
 
 const Nav = () => {
@@ -11,7 +11,7 @@ const Nav = () => {
     const lastScrollY = useRef(0);
 
     const links = <>
-        <div>About</div>
+        <div>About </div>
         <div>Services</div>
         <div>Treatment</div>
         <div>Contact</div>
