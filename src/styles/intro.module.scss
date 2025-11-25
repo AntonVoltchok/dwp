@@ -6,6 +6,11 @@
   height: 250px;
   background-position: center;
   background-size: cover;
+  clip-path: polygon(0 0,
+  100% 0,
+  100% 100%,
+  var(--bevel-size, 40px) 100%,
+  0 calc(100% - var(--bevel-size, 40px)));
 }
 
 .exploreSectionMb {
@@ -96,7 +101,7 @@
     font-weight: 400;
     letter-spacing: 0.04rem;
     text-align: left;
-    padding: 2rem 2rem 0;
+    padding: 1.25rem 2rem 0;
 
     p {
       text-align: center;

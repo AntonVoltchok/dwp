@@ -29,8 +29,9 @@
 
 .serviceTitle {
   font-family: JosefinSans-Light;
-  font-size: 30px;
+  font-size: 27px;
   padding-bottom: 2rem;
+  letter-spacing: -0.008rem;
 }
 
 .serviceDesc {
@@ -38,15 +39,95 @@
   padding: 0.5rem 0 0.5rem 1rem;
 }
 
+// Mobile Accordion Styles
+.accordionContainer {
+  width: 100%;
+  margin: 22px 0 32px;
+  border: 1px solid rgba(255, 255, 255, .6);
+}
+
+.accordionItem {
+  padding: 0.5rem 1rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  color: #fff;
+  text-align: left;
+}
+
+.accordionTitle {
+  font-family: JosefinSans-Light;
+  font-size: 1.59rem;
+  letter-spacing: -0.02rem;
+  flex: 1 1;
+  padding-right: 1rem;
+}
+
+.chevronIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  fill: #fff;
+  color: #fff;
+  
+  path {
+    fill: #fff;
+  }
+  
+  &.chevronOpen {
+    transform: rotate(180deg);
+  }
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+  
+  &.accordionContentOpen {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+.accordionDescription {
+  padding: 0 0 1.5rem 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 @media screen and (min-width: 1000px) {
   .serviceDesc {
     padding: 0.5rem 0 0.5rem 3rem;
   }
 
+  .serviceTitle {
+    font-family: JosefinSans-Light;
+    font-size: 30px;
+    padding-bottom: 2rem;
+  }
+
   .servicesContainer {
     @include desktopContentPadding;
     background-image: url('../assets/services.jpg');
-    padding-top: 4rem;
-    padding-bottom: 0rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
   }
 }

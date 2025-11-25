@@ -27,7 +27,7 @@ function prefersLightweightParallax() {
 
 function getEffectiveSpeed(baseSpeed) {
   if (prefersLightweightParallax()) {
-    return baseSpeed * 0.65;
+    return baseSpeed * 0.75;
   }
   return baseSpeed;
 }
