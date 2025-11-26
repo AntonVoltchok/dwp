@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dwp/static/css/main.372d2653.css",
-    "main.js": "/dwp/static/js/main.0bf8a99b.js",
+    "main.css": "/dwp/static/css/main.500cf113.css",
+    "main.js": "/dwp/static/js/main.d2b2bd86.js",
     "static/js/453.8c2fd068.chunk.js": "/dwp/static/js/453.8c2fd068.chunk.js",
     "static/media/treatmentBg.jpg": "/dwp/static/media/treatmentBg.bd9aae7f05808fb5af10.jpg",
     "static/media/heroBanner.jpg": "/dwp/static/media/heroBanner.5c1349482853848ac6de.jpg",
@@ -11,18 +11,19 @@
     "static/media/Raleway-ExtraLight.ttf": "/dwp/static/media/Raleway-ExtraLight.3ba73fc888c21b510ae1.ttf",
     "static/media/IBMPlexSerif-Regular.ttf": "/dwp/static/media/IBMPlexSerif-Regular.7447dec55614fbae35e2.ttf",
     "static/media/office.jpg": "/dwp/static/media/office.a26a82b6b431980340ac.jpg",
+    "static/media/profile.webp": "/dwp/static/media/profile.090d30cb6626ce1e14d6.webp",
     "static/media/services.jpg": "/dwp/static/media/services.20cf76e0b2d7e9d5dba9.jpg",
     "static/media/Lato-Regular.ttf": "/dwp/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
     "static/media/JosefinSans-Light.ttf": "/dwp/static/media/JosefinSans-Light.82f56d62b11fe2823b47.ttf",
     "index.html": "/dwp/index.html",
     "static/media/down-chevron.svg": "/dwp/static/media/down-chevron.8b440f1acbd2ccaabe7ad6e40fe95166.svg",
     "static/media/menuIcon.svg": "/dwp/static/media/menuIcon.33faa0bdce570db77e11beb5f0b897a6.svg",
-    "main.372d2653.css.map": "/dwp/static/css/main.372d2653.css.map",
-    "main.0bf8a99b.js.map": "/dwp/static/js/main.0bf8a99b.js.map",
+    "main.500cf113.css.map": "/dwp/static/css/main.500cf113.css.map",
+    "main.d2b2bd86.js.map": "/dwp/static/js/main.d2b2bd86.js.map",
     "453.8c2fd068.chunk.js.map": "/dwp/static/js/453.8c2fd068.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.372d2653.css",
-    "static/js/main.0bf8a99b.js"
+    "static/css/main.500cf113.css",
+    "static/js/main.d2b2bd86.js"
   ]
 }
