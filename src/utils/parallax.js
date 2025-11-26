@@ -72,10 +72,13 @@ function throttle(fn, delay = DEFAULT_THROTTLE) {
   };
 }
 
-export function initParallax(selector = '.hero-container', speed = 0.5) {
-  if (typeof window === 'undefined' || hasReducedMotionPreference()) return;
+// selectorOrElement can be a CSS selector string or a DOM element
+export function initParallax(selectorOrElement = '.hero-container', speed = 0.5) {
+  if (typeof window === 'undefined') return;
 
-  const el = document.querySelector(selector);
+  const el = typeof selectorOrElement === 'string'
+    ? document.querySelector(selectorOrElement)
+    : selectorOrElement;
   if (!el) return;
 
   const effectiveSpeed = getEffectiveSpeed(speed);
@@ -100,7 +103,11 @@ export function initParallax(selector = '.hero-container', speed = 0.5) {
       // If there's an absolutely-positioned inner background, use transform for smoother animation
       if (bgEl) {
         const bgHeight = bgEl.offsetHeight || bgEl.getBoundingClientRect().height;
-        const maxTranslate = Math.max(0, bgHeight - elHeight);
+        let maxTranslate = Math.max(0, bgHeight - elHeight);
+        // If heights are equal (e.g. some desktop layouts), fall back to a fraction of the element height
+        if (maxTranslate === 0 && elHeight) {
+          maxTranslate = elHeight * 0.25;
+        }
         // translate in px, invert normalized so background moves slower than foreground
         const translate = -normalized * maxTranslate * effectiveSpeed;
         bgEl.style.transform = `translate3d(0, ${translate}px, 0)`;
@@ -132,7 +139,7 @@ export function destroyParallax() {
 
 // Horizontal parallax function - moves background image horizontally as user scrolls
 export function initHorizontalParallax(selector = '.services-container', speed = 0.3) {
-  if (typeof window === 'undefined' || hasReducedMotionPreference()) return;
+  if (typeof window === 'undefined') return;
 
   const el = document.querySelector(selector);
   if (!el) return;
@@ -204,7 +211,7 @@ export function destroyHorizontalParallax() {
 
 // Diagonal parallax function - moves background image diagonally from bottom left to top right
 export function initDiagonalParallax(selector = '.treatment-container', speed = 0.3) {
-  if (typeof window === 'undefined' || hasReducedMotionPreference()) return;
+  if (typeof window === 'undefined') return;
 
   const el = document.querySelector(selector);
   if (!el) return;

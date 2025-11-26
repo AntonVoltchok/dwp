@@ -35,14 +35,9 @@ $heroHeight: 92vh;
   pointer-events: none;
   will-change: transform;
   transform: translate3d(0, 0, 0);
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    margin-top: -60px;
-  }
+  background-image: url('../assets/heroBannerMb.jpg');
+  background-size: cover;
+  background-position: center top;
 }
 
 .heroText {
@@ -85,14 +80,18 @@ $heroHeight: 92vh;
     letter-spacing: 0.02rem;
   }
 
-  .heroContainer {
-    background-attachment: fixed;
-    background-position: center center;
-  }
-
   .heroBg {
-    img {
-      margin-top: 0px;
-    }
+    background-image: url('../assets/heroBanner.jpg');
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    background-size: cover;
   }
 }
