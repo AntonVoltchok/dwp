@@ -3,7 +3,7 @@ export default {
     subtitle: "THIS ONE IS MANUAL CHANGE LET ME KNOW IF ITS DIFFERENT FROM: Psychotherapy and Assessment Services",
     quote: "“We may not be responsible for the world that created our minds, but we can take responsibility for the mind with which we create our world.“",
     quoteAuthor: "- Dr. Gabor Mate",
-    description: "Welcome! I work with individuals through a holistic and creative therapeutic lens. I aspire to develop a connection with my clients by way of curiosity and compassion in order to build trust and enhance clients' unique sense of self. With an integrative approach to treatment, I utilize components from several different therapeutic modalities in order to meet the unique needs of the individual.",
+    description: "Welcome! It is a profound privilege to meet individuals at a particular moment in their life journey and to accompany them, for however long, as they grow, heal, and deepen their understanding of themselves. Bearing witness to this process—and contributing to it in meaningful ways—is invaluable to me and is at the heart of why I am devoted to this work. I approach each person through a holistic and creative therapeutic lens, striving to cultivate connection through curiosity, compassion, and genuine presence. My goal is to build trust while supporting the growth of each client’s unique sense of self. Drawing from an integrative framework, I weave together elements from various therapeutic modalities to meet the distinct needs of every individual.",
     services: [
         {
             title: "Individual therapy",

@@ -32,9 +32,10 @@ function getEffectiveSpeed(baseSpeed) {
   return baseSpeed;
 }
 
-const DEFAULT_THROTTLE = 16;
-// ~45fps -> ~22ms (1000/45 ≈ 22.2)
-const LIGHTWEIGHT_THROTTLE = 22;
+// Desktop throttle (~40–45fps) and mobile throttle (~45fps)
+// Desktop runs slightly less often to reduce CPU while remaining smooth.
+const DEFAULT_THROTTLE = 24;      // ≈ 41fps
+const LIGHTWEIGHT_THROTTLE = 22;  // ≈ 45fps
 
 function getThrottleDelay() {
   return prefersLightweightParallax() ? LIGHTWEIGHT_THROTTLE : DEFAULT_THROTTLE;
