@@ -3,7 +3,7 @@ export default {
     subtitle: "THIS ONE IS MANUAL CHANGE LET ME KNOW IF ITS DIFFERENT FROM: Psychotherapy and Assessment Services",
     quote: "“We may not be responsible for the world that created our minds, but we can take responsibility for the mind with which we create our world.“",
     quoteAuthor: "- Dr. Gabor Mate",
-    description: "Welcome to De Waal Psychology. I work with individuals through a holistic and creative therapeutic lens. I aspire to develop a connection with my clients by way of curiosity and compassion in order to build trust and enhance clients' unique sense of self. With an integrative approach to treatment, I utilize components from several different therapeutic modalities in order to meet the unique needs of the individual.",
+    description: "Welcome! I work with individuals through a holistic and creative therapeutic lens. I aspire to develop a connection with my clients by way of curiosity and compassion in order to build trust and enhance clients' unique sense of self. With an integrative approach to treatment, I utilize components from several different therapeutic modalities in order to meet the unique needs of the individual.",
     services: [
         {
             title: "Individual therapy",
@@ -32,11 +32,11 @@ export default {
             description: "Psychodynamic therapy is a type of psychotherapy that integrates past experiences with present behavior, offering a comprehensive understanding of an individual’s life history. Over the years, psychodynamic therapy has evolved to emphasize the role of past unresolved conflicts and how they manifest themselves in shaping people's behavior and personality. It has shown to be effective in helping people deal with depression, anxiety, pain, and relationship issues."
         },
         {
-            title: "Dialectical Behavior Therapy (DBT)",
+            title: "Dialectical Behavior Therapy",
             description: "DBT is a helpful form of therapy for individuals who experience dysregulation or intense emotions. This modality of therapy focuses on acceptance and changing maladaptive or self destructive behaviors and is based on four key pillars- mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness."
         },
         {
-            title: "Cognitive Behavioral Therapy (CBT)",
+            title: "Cognitive Behavioral Therapy",
             description: "CBT can help a person become more aware of inaccurate or negative thinking in order to view challenging situations more clearly and respond to them in a more effective way. CBT is a collaborative, goal-oriented, and hands-on approach that focuses on the present and finding solutions to current problems."
         },
         {

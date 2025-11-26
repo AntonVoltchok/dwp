@@ -3,7 +3,12 @@ import styles from '../styles/services.module.scss';
 import Heading from './Heading';
 import { useEffect, useState } from 'react';
 import { useIsMobile } from '../utils/device';
-import { initHorizontalParallax, destroyHorizontalParallax } from '../utils/parallax';
+import { 
+  initHorizontalParallax, 
+  destroyHorizontalParallax,
+  initParallax,
+  destroyParallax 
+} from '../utils/parallax';
 import { ReactComponent as ChevronIcon } from '../assets/down-chevron.svg';
 
 const Services = () => {
@@ -12,9 +17,14 @@ const Services = () => {
 
   useEffect(() => {
     // Initialize horizontal parallax on client only
-    initHorizontalParallax(`.${styles.servicesContainer}`, 0.55);
-    return () => destroyHorizontalParallax();
-  }, [styles.servicesContainer]);
+    if (isMobile) {
+      initHorizontalParallax(`.${styles.servicesContainer}`, 0.55);
+    } else {
+      initParallax(`.${styles.servicesContainer}`, 0.55);
+    }
+    
+    return () => isMobile ? destroyHorizontalParallax() : destroyParallax();
+  }, [styles.servicesContainer, isMobile]);
 
   const toggleAccordion = (index) => {
     setOpenItems(prev => {

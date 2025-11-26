@@ -31,19 +31,41 @@
 
 .treatmentTitle {
   font-family: JosefinSans-Light;
-  font-size: 30px;
-  padding-bottom: 1rem;
+  font-size: 1.62rem;
+  letter-spacing: -0.02rem;
+  padding-bottom: .5rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.treatmentContent {
+  position: relative;
+  max-height: 140px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.treatmentContentOpen {
+  max-height: 1000px;
 }
 
 .treatmentDesc {
-  padding: 0 0 1rem;
+  padding: 0 0 2.25rem;
+}
+
+.learnMoreButton {
+  position: absolute;
+  right: 0;
+  bottom: 0.4rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1000px) {
-  .treatmentDesc {
-    padding: 0.5rem 0 0.5rem 3rem;
-  }
-
   .treatmentContainer {
     @include desktopContentPadding;
     background-image: url('../assets/treatmentBg.jpg');
@@ -54,21 +76,62 @@
     background-color: rgb(100, 100, 135)
   }
 
-  .treatmentsContent {
+  // Desktop horizontal accordion layout
+  .treatmentsHorizontal {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    margin: 32px 0 40px;
+    background-color:hsla(90, 2%, 50%, 0.62);
+    border-radius: 4px;
   }
 
-  .treatment {
+  .treatmentTabs {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 280px;
+    margin-right: 3rem;
+    padding: 2rem;
+  }
+
+  .treatmentTab {
+    all: unset;
+    cursor: pointer;
+    padding: 1.6rem 1.5rem;
+    font-family: "IBMPlexSerif-Regular", Tahoma, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 800;
+  }
+
+  .treatmentTabActive {
     color: #fff;
-    background-color: hsla(90, 2%, 50%, 0.62);
-    padding: 1.25rem;
-    width: 25.5vw;
-    margin: 1rem;
+    border-left-color: #fff;
+    background-color: rgba(255,255,255,.1);
   }
 
-  .treatmentDesc {
-    padding: 0;
+  .treatmentPanel {
+    flex: 1 1 auto;
+    max-width: 640px;
+    padding: 1rem 5rem 2rem 2rem;
+    align-self: center;
+  }
+
+  .treatmentPanelTitle {
+    font-family: JosefinSans-Light;
+    font-size: 1.6rem;
+    letter-spacing: -0.02rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: .75rem;
+    color: #fff;
+  }
+
+  .treatmentPanelDesc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #fff;
   }
 
 }

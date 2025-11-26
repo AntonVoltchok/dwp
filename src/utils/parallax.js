@@ -27,13 +27,14 @@ function prefersLightweightParallax() {
 
 function getEffectiveSpeed(baseSpeed) {
   if (prefersLightweightParallax()) {
-    return baseSpeed * 0.75;
+    return baseSpeed * 0.65;
   }
   return baseSpeed;
 }
 
 const DEFAULT_THROTTLE = 16;
-const LIGHTWEIGHT_THROTTLE = 32;
+// ~45fps -> ~22ms (1000/45 ≈ 22.2)
+const LIGHTWEIGHT_THROTTLE = 22;
 
 function getThrottleDelay() {
   return prefersLightweightParallax() ? LIGHTWEIGHT_THROTTLE : DEFAULT_THROTTLE;
