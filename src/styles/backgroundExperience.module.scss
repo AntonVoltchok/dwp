@@ -1,0 +1,71 @@
+@import "./mixins.module";
+
+.container {
+    background-color: hsl(56 16% 43% / 1);
+    color: #fff;
+    min-height: 60vh;
+    padding: 3rem 0 4rem;
+    @include mobileContentPadding;
+}
+
+.content {
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 1.5rem 0;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.backgroundSectionTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+}
+
+.potImg {
+    background-image: url('../assets/officePot.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 390px;
+    height: 440px;
+    border-radius: 6px;
+}
+
+.catImg {
+    background-image: url('../assets/ocean.webp');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 390px;
+    height: 390px;
+    border-radius: 6px;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        @include desktopContentPaddingSmall;
+        padding-top: 11rem;
+        padding-bottom: 4rem;
+    }
+
+    .topContentBlock {
+        width: 65%;
+    }
+    .content {
+        padding: 0 0 3rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+}
+

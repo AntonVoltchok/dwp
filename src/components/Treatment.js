@@ -13,7 +13,7 @@ const Treatment = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    initDiagonalParallax(`.${styles.treatmentContainer}`, 0.9);
+    initDiagonalParallax(`.${styles.treatmentContainer}`, 0.2);
     return () => destroyDiagonalParallax();
   }, [styles.treatmentContainer]);
 
@@ -90,12 +90,15 @@ const Treatment = () => {
 
   return (
     <div className={styles.treatmentContainer} id="treatment">
-      <Heading>Treatment</Heading>
-      {
-        isMobile ? <div className={styles.treatmentsContent}>
-        {content?.treatment?.map((treatment, index) => treatmentBlockMobile(treatment, index))}
-      </div> : treatmentsHorizontalAccordion()
-      }
+      <div className={styles.treatmentBgBlur} />
+      <div className={styles.treatmentContentWrapper}>
+        <Heading>Treatment</Heading>
+        {
+          isMobile ? <div className={styles.treatmentsContent}>
+            {content?.treatment?.map((treatment, index) => treatmentBlockMobile(treatment, index))}
+          </div> : treatmentsHorizontalAccordion()
+        }
+      </div>
     </div>
   );
 }

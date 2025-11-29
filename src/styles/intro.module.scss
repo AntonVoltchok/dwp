@@ -1,7 +1,7 @@
 @import "./mixins.module";
 
 .officeImgMb {
-  background-image: url('../assets/office.jpg');
+  background-image: url('../assets/office.webp');
   width: 100%;
   height: 250px;
   background-position: center;
@@ -114,7 +114,7 @@
     justify-content: center;
 
     .officeImg {
-      background-image: url('../assets/office.jpg');
+      background-image: url('../assets/office.webp');
       width: 70%;
       max-width: 380px;
       height: 280px;

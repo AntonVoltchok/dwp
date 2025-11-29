@@ -7,7 +7,7 @@
 
 .treatmentContainer {
   min-height: 50vh;
-  background-image: url('../assets/treatmentBgMb.jpg');
+  background-image: url('../assets/treatmentBgMb.webp');
   width: auto;
   background-position: right;
   background-size: cover;
@@ -68,12 +68,28 @@
 @media screen and (min-width: 1000px) {
   .treatmentContainer {
     @include desktopContentPadding;
-    background-image: url('../assets/treatmentBg.jpg');
+    background-image: url('../assets/treatmentBg.webp');
     background-position: left;
-    background-size: cover;
+    background-size: auto;
     padding-top: 6rem;
     padding-bottom: 5.5rem;
-    background-color: rgb(100, 100, 135)
+    background-color: rgb(100, 100, 135);
+    position: relative;
+  }
+  .treatmentBgBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .treatmentContentWrapper {
+    position: relative;
+    z-index: 1;
   }
 
   // Desktop horizontal accordion layout

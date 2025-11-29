@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "De Waal Psychology",
+  "name": "De Waal Psychology - Psychotherapy and Assessment Services",
+  "description": "Professional psychotherapy and assessment services in Nyack, NY. Specializing in trauma therapy, EMDR, DBT, CBT, and psychodynamic therapy.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +9,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo192.webp",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "logo512.webp",
       "type": "image/png",
       "sizes": "512x512"
     }

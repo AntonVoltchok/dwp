@@ -3,11 +3,11 @@ import styles from '../styles/services.module.scss';
 import Heading from './Heading';
 import { useEffect, useState } from 'react';
 import { useIsMobile } from '../utils/device';
-import { 
-  initHorizontalParallax, 
+import {
+  initHorizontalParallax,
   destroyHorizontalParallax,
   initParallax,
-  destroyParallax 
+  destroyParallax
 } from '../utils/parallax';
 import { ReactComponent as ChevronIcon } from '../assets/down-chevron.svg';
 
@@ -20,9 +20,9 @@ const Services = () => {
     if (isMobile) {
       initHorizontalParallax(`.${styles.servicesContainer}`, 0.55);
     } else {
-      initParallax(`.${styles.servicesContainer}`, 0.55);
+      initParallax(`.${styles.servicesContainer}`, 1.25);
     }
-    
+
     return () => isMobile ? destroyHorizontalParallax() : destroyParallax();
   }, [styles.servicesContainer, isMobile]);
 
@@ -60,11 +60,11 @@ const Services = () => {
                 aria-expanded={isOpen}
               >
                 <span className={styles.accordionTitle}>{service.title}</span>
-                <ChevronIcon 
+                <ChevronIcon
                   className={`${styles.chevronIcon} ${isOpen ? styles.chevronOpen : ''}`}
                 />
               </button>
-              <div 
+              <div
                 className={`${styles.accordionContent} ${isOpen ? styles.accordionContentOpen : ''}`}
               >
                 <div className={styles.accordionDescription}>{service.description}</div>
@@ -75,14 +75,17 @@ const Services = () => {
       </div>
     );
   }
-  
+
   return (
     <div className={styles.servicesContainer} id="services">
-      <Heading>Services</Heading>
-      {isMobile ? mobileAccordionView() :
-        <div className={styles.servicesContent}>
-        {content?.services?.map(service => serviceBlock(service))}
-      </div>}
+      <div className={styles.servicesBgBlur} />
+      <div className={styles.servicesContentWrapper}>
+        <Heading>Services</Heading>
+        {isMobile ? mobileAccordionView() :
+          <div className={styles.servicesContent}>
+            {content?.services?.map(service => serviceBlock(service))}
+          </div>}
+      </div>
     </div>
   );
 }

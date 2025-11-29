@@ -1,8 +1,9 @@
 import styles from '../styles/nav.module.scss';
 import { useIsMobile } from '../utils/device';
 import { ReactComponent as MenuIcon } from '../assets/menuIcon.svg';
-import logo from '../assets/logo-v1.png';
+import logo from '../assets/logo-v1.webp';
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const navItems = [
     { label: 'Home', targetId: 'home' },
@@ -14,6 +15,8 @@ const navItems = [
 
 const Nav = () => {
     const isMobile = useIsMobile();
+    const navigate = useNavigate();
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isNavVisible, setIsNavVisible] = useState(true);
     const lastScrollY = useRef(0);
@@ -64,24 +67,51 @@ const Nav = () => {
 
     const scrollToSection = useCallback((targetId) => {
         if (typeof window === 'undefined' || typeof document === 'undefined') return;
-        const section = document.getElementById(targetId);
-        if (!section) return;
+        
+        // If we're not on the home page, navigate there first
+        if (location.pathname !== '/') {
+            navigate('/', { state: { scrollTo: targetId } });
+            return;
+        }
 
-        const yOffset = isMobile ? 80 : 0;
-        const scrollPosition = window.pageYOffset ?? window.scrollY ?? 0;
-        const elementTop = section.getBoundingClientRect().top + scrollPosition;
-        const targetPosition = elementTop - yOffset;
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+            const section = document.getElementById(targetId);
+            if (!section) return;
 
-        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-    }, [isMobile]);
+            const yOffset = isMobile ? 80 : 0;
+            const scrollPosition = window.pageYOffset ?? window.scrollY ?? 0;
+            const elementTop = section.getBoundingClientRect().top + scrollPosition;
+            const targetPosition = elementTop - yOffset;
+
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }, 100);
+    }, [isMobile, location.pathname, navigate]);
+
+    // Handle scroll after navigation
+    useEffect(() => {
+        if (location.state?.scrollTo && location.pathname === '/') {
+            const targetId = location.state.scrollTo;
+            setTimeout(() => {
+                const section = document.getElementById(targetId);
+                if (section) {
+                    const yOffset = isMobile ? 80 : 0;
+                    const scrollPosition = window.pageYOffset ?? window.scrollY ?? 0;
+                    const elementTop = section.getBoundingClientRect().top + scrollPosition;
+                    const targetPosition = elementTop - yOffset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    // Clear the state to prevent re-scrolling
+                    navigate(location.pathname, { replace: true, state: null });
+                }
+            }, 100);
+        }
+    }, [location, isMobile, navigate]);
 
     const handleNavItemClick = useCallback((targetId) => {
         if (isMobile) {
             closeMenu();
-            requestAnimationFrame(() => scrollToSection(targetId));
-        } else {
-            scrollToSection(targetId);
         }
+        scrollToSection(targetId);
     }, [closeMenu, isMobile, scrollToSection]);
 
     const handleKeyDown = useCallback((event, targetId) => {
@@ -103,7 +133,19 @@ const Nav = () => {
     return (
         <>
             <div className={navClasses}>
-                <div className={styles.logoContainer}>
+                <div 
+                    className={styles.logoContainer}
+                    onClick={() => navigate('/')}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            navigate('/');
+                        }
+                    }}
+                    style={{ cursor: 'pointer' }}
+                >
                     <img src={logo} alt="De Waal Psychology logo" />
                 </div>
                 {isMobile ? (

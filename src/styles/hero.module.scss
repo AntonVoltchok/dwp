@@ -35,7 +35,7 @@ $heroHeight: 92vh;
   pointer-events: none;
   will-change: transform;
   transform: translate3d(0, 0, 0);
-  background-image: url('../assets/heroBannerMb.jpg');
+  background-image: url('../assets/heroBannerMb.webp');
   background-size: cover;
   background-position: center top;
 }
@@ -81,7 +81,7 @@ $heroHeight: 92vh;
   }
 
   .heroBg {
-    background-image: url('../assets/heroBanner.jpg');
+    background-image: url('../assets/heroBanner.webp');
     background-position: center center;
     position: absolute;
     top: 0;

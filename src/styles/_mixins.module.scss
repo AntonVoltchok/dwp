@@ -12,6 +12,10 @@
   padding: 0 18vw;
 }
 
+@mixin desktopContentPaddingSmall {
+  padding: 0 15vw;
+}
+
 @mixin mobileContentPadding {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
