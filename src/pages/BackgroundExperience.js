@@ -37,7 +37,7 @@ const BackgroundExperience = () => {
                         </div>
 
                         <div className={backgroundExperienceStyles.backgroundSectionContainer}>
-                            {!isMobile && <div className={backgroundExperienceStyles.catImg} />}
+                            {!isMobile && <div className={backgroundExperienceStyles.shelfImg} />}
                             <div className={backgroundExperienceStyles.topContentBlock}>
                                 <section className={backgroundExperienceStyles.section}>
                                     {backgroundAndExperience.thirdPart}
