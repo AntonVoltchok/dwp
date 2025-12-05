@@ -9,7 +9,7 @@ const Heading = (props) => {
     return (
       <div className={styles.lineContainerMb}>
         <div className={styles.lineHeadingMb}>{props.children}</div>
-        <div className={styles.lineMb} />
+        {!props?.noLine &&<div className={styles.lineMb} />}
       </div>
     );
   }

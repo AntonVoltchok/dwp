@@ -80,13 +80,20 @@
 
 .backgroundLink {
     cursor: pointer;
-    text-decoration: underline;
     margin-top: 1rem;
-    padding: 0.5rem 0;
+    font-family: Lato-Regular;
+    padding: 0.55rem 1.15rem 0.7rem;
     transition: opacity 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     
     &:hover {
-        opacity: 0.8;
+        opacity: 1;
+        border: 1px solid rgba(255, 255, 255, 1);
     }
     
     &:focus {

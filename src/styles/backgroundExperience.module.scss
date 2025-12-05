@@ -1,31 +1,36 @@
 @import "./mixins.module";
 
+.bgExpWrapper {
+    width: 100%;
+}
+
 .container {
     background-color: hsl(56 16% 43% / 1);
     color: #fff;
     min-height: 60vh;
-    padding: 3rem 0 4rem;
+    padding: 2rem 0 4rem;
     @include mobileContentPadding;
 }
 
 .content {
-    padding: 2rem 0;
+    padding: 0;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .section {
-    padding: 1.5rem 0;
+    padding: 0;
     line-height: 1.8;
     font-size: 16px;
 }
 
-.backgroundSectionTop {
+.backgroundSectionContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
     width: 100%;
+    flex-direction: column;
 }
 
 .potImg {
@@ -35,21 +40,30 @@
     background-repeat: no-repeat;
     width: 390px;
     height: 440px;
-    border-radius: 6px;
+    margin-top: -37px;
+    margin-bottom: 27px;
 }
 
-.catImg {
-    background-image: url('../assets/ocean.webp');
+.mobileBg {
+    background-image: url('../assets/officeShelf.jpg');
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
-    width: 390px;
+    width: 100vw;
     height: 390px;
     border-radius: 6px;
 }
 
+
+
+
+
+
 @media screen and (min-width: 1000px) {
     .container {
+        background-color: hsl(56 16% 43% / 1);
+        color: #fff;
+        min-height: 60vh;
         @include desktopContentPaddingSmall;
         padding-top: 11rem;
         padding-bottom: 4rem;
@@ -58,8 +72,11 @@
     .topContentBlock {
         width: 65%;
     }
+
     .content {
         padding: 0 0 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .section {
@@ -67,5 +84,34 @@
         font-size: 16px;
         line-height: 1.9;
     }
-}
 
+    .backgroundSectionContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .potImg {
+        background-image: url('../assets/officePot.jpg');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        width: 390px;
+        height: 440px;
+        border-radius: 6px;
+        margin: 0;
+    }
+
+    .catImg {
+        background-image: url('../assets/ocean.webp');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        width: 390px;
+        height: 390px;
+        border-radius: 6px;
+    }
+}
