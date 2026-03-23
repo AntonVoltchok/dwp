@@ -17,7 +17,7 @@ const Treatment = () => {
   useEffect(() => {
     initDiagonalParallax(`.${styles.treatmentContainer}`, 0.2);
     return () => destroyDiagonalParallax();
-  }, [styles.treatmentContainer]);
+  }, []);
 
   const toggleExpanded = (index) => {
     setExpandedItems(prev => {

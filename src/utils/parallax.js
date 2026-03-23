@@ -13,11 +13,6 @@ let horizontalHandler = null;
 let diagonalRafId = null;
 let diagonalHandler = null;
 
-function hasReducedMotionPreference() {
-  if (typeof window === 'undefined' || !window.matchMedia) return false;
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-}
-
 function prefersLightweightParallax() {
   if (typeof window === 'undefined' || !window.matchMedia) return false;
   const coarsePointer = window.matchMedia('(pointer: coarse)').matches;

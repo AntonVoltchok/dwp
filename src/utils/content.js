@@ -1,4 +1,4 @@
-export default {
+const content = {
     "title": "De Waal Psychology",
     "subtitle": "THIS ONE IS MANUAL CHANGE LET ME KNOW IF ITS DIFFERENT FROM: Psychotherapy and Assessment Services",
     "quote": "“We may not be responsible for the world that created our minds, but we can take responsibility for the mind with which we create our world.“",
@@ -173,4 +173,6 @@ export default {
       "email": "dr.alexandradewaal@gmail.com",
       "office": "48 Burd Street Suite 206 Nyack, NY 10960"
     }
-  }
+  };
+
+export default content;

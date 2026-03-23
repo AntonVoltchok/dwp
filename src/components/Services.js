@@ -24,7 +24,7 @@ const Services = () => {
     }
 
     return () => isMobile ? destroyHorizontalParallax() : destroyParallax();
-  }, [styles.servicesContainer, isMobile]);
+  }, [isMobile]);
 
   const toggleAccordion = (index) => {
     setOpenItems(prev => {

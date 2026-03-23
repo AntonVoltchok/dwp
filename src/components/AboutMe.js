@@ -52,8 +52,3 @@ const AboutMe = () => {
 }
 
 export default AboutMe;
-
-
-{/* <section className={styles.aboutSection}>
-                {content.aboutMe.thirdPart}
-            </section> */}
