@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home'
 import BackgroundExperience from './pages/BackgroundExperience';
+import EMDR from './pages/EMDR';
 import styles from './styles/App.module.scss';
 import './assets/JosefinSans-Light.ttf';
 
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/background-experience" element={<BackgroundExperience />} />
+          <Route path="/emdr" element={<EMDR />} />
           <Route path="/dwp" element={<Navigate to="/" replace />} />
           {/* Catch-all for any unmatched routes */}
           <Route path="*" element={<Navigate to="/" replace />} />

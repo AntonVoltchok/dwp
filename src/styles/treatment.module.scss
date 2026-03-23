@@ -54,8 +54,8 @@
 
 .learnMoreButton {
   position: absolute;
-  right: 0;
-  bottom: 0.4rem;
+  left: -5px;
+  bottom: 0;
   background: none;
   border: none;
   color: #fff;
@@ -63,6 +63,21 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.learnEmdrMoreButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: none;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 4px 12px;
+  border-radius: 3px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -148,6 +163,11 @@
     font-size: 1rem;
     line-height: 1.7;
     color: #fff;
+  }
+
+  .learnEmdrMoreButton {
+    position: relative;
+    margin-top: 1rem;
   }
 
 }

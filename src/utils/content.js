@@ -3,15 +3,16 @@ export default {
     "subtitle": "THIS ONE IS MANUAL CHANGE LET ME KNOW IF ITS DIFFERENT FROM: Psychotherapy and Assessment Services",
     "quote": "“We may not be responsible for the world that created our minds, but we can take responsibility for the mind with which we create our world.“",
     "quoteAuthor": "- Dr. Gabor Mate",
-    "description": "Welcome! It is a profound privilege to meet individuals at a particular moment in their life journey and to accompany them, for however long, as they grow, heal, and deepen their understanding of themselves. Bearing witness to this process—and contributing to it in meaningful ways—is invaluable to me and is at the heart of why I am devoted to this work. I approach each person through a holistic and creative therapeutic lens, striving to cultivate connection through curiosity, compassion, and genuine presence. My goal is to build trust while supporting the growth of each client’s unique sense of self. Drawing from an integrative framework, I weave together elements from various therapeutic modalities to meet the distinct needs of every individual.",
+    "descriptionPart1": "Welcome! It is a profound privilege to meet individuals at a particular moment in their life and to accompany them, for however long, as they heal, grow, and deepen their understanding of themselves. Bearing witness to this process—and contributing to it in meaningful ways—is invaluable to me and is at the heart of why I am devoted to this work.",
+    "descriptionPart2": "I approach each person through a holistic and creative therapeutic lens, striving to cultivate connection through curiosity, compassion, and genuine presence. My goal is to build trust while supporting the growth of each client’s unique sense of self. Drawing from an integrative framework, I weave together elements from various therapeutic modalities to meet the distinct needs of every individual.",
     "services": [
       {
         "title": "Individual therapy",
-        "description": "Individual therapy is a process that involves resolving behaviors, beliefs, feelings, or any other issues that cause distress. Through individual therapy a person can change distressful patterns of behavior or habits, decrease painful feelings, and improve their relationships."
+        "description": "I provide individual psychotherapy, which is a process that involves identifying and processing beliefs, feelings, behaviors, or any other issues that cause distress. Through individual therapy a person can change distressful patterns of behavior or habits, decrease painful feelings, and improve their relationships."
       },
       {
         "title": "Supervision",
-        "description": "I provide clinical supervision as a way to help therapists develop their skills, reflect on their work, and improve the overall well being as a person and a therapist. Supervision can be a helpful source of support while navigating the intricacies of a client therapy caseload. I also provide supervision for doctoral or masters level students looking to obtain clinical hours towards licensure."
+        "description": "I facilitate clinical supervision as a way to help therapists develop their skills, reflect on their work, and improve the overall well being as a person and a therapist. Supervision can be a helpful source of support while navigating the intricacies of a client therapy caseload. I also provide supervision for doctoral or masters level students looking to obtain clinical hours towards licensure."
       },
       {
         "title": "Forensic assessment",
@@ -25,7 +26,8 @@ export default {
     "treatment": [
       {
         "title": "EMDR",
-        "description": "Eye Movement Desensitization and Reprocessing (EMDR) is an integrative psychotherapy approach that has been extensively researched and proven effective for the treatment of trauma. I offer EMDR if deemed appropriate in individual therapy or as a limited series of sessions while working with an outside therapist. To learn more about EMDR, visit www.emdria.org."
+        "description": "EMDR- Eye Movement Desensitization and Reprocessing (EMDR) is an integrative psychotherapy approach that has been extensively researched and proven effective for the treatment of trauma. I offer EMDR if deemed appropriate in individual therapy or as a limited series of sessions while working with an outside therapist.",
+        "learnMoreRoute": "/emdr"
       },
       {
         "title": "Psychodynamic Therapy",
@@ -47,6 +49,13 @@ export default {
     "aboutMe": {
       "firstPart": "I work from an attachment-based framework to help clients uncover the roots of distress and develop insight into disruptive patterns or behaviors. Much of my work centers on trauma, which is not always the result of a single catastrophic event. It can also arise from a series of subtle or cumulative experiences across childhood or throughout life. Trauma is often less about what happened to us and more about what continues to live within us—shaping how we see ourselves, relate to others, and move through the world. With awareness and a willingness to engage in the healing process, its weight can gradually become lighter. In therapy, we work together to identify significant events or patterns and to explore the emotions tied to them, creating space for understanding, integration, and change.",
       "secondPart": "Both personally and clinically, I value art, music, and mindfulness, and often incorporate these practices as pathways for processing difficult emotions and supporting the body and mind in self-soothing and restoration."
+    },
+    "emdr": {
+      "partOne": "Eye Movement Desensitization and Reprocessing (EMDR) is a holistic therapeutic approach that helps individuals access and process distressing life events and traumatic memories that may underlie current symptoms, challenges, or negative self-beliefs. Rather than functioning as a single technique, EMDR centers each person’s innate capacity for healing, integration, and wholeness.",
+      "partTwo": "EMDR therapy can be effective for a wide range of concerns, including trauma and PTSD, generalized anxiety, panic, phobias, performance-related anxiety, habits or addictions, grief and loss, and somatic symptoms.",
+      "partThree": "In a typical session, clients bring a distressing memory to mind while attending to an external bilateral stimulus—such as guided eye movements, tactile pulsers, or auditory cues. This process reduces emotional distress and supports the emergence of new, adaptive insights. As integration occurs, clients often leave sessions with a clearer sense of themselves, a more grounded perspective, and increased access to their strengths and potential.",
+      "partFour": "Attachment-Focused EMDR, developed by Dr. Laurel Parnell, is specifically designed to address developmental trauma, including early experiences of neglect or abuse. This approach is reparative and highly individualized, taking into account each client’s cultural context and relational needs. It places particular emphasis on resourcing, stabilization, and the repair of attachment wounds to strengthen the client’s internal capacities and promote deeper healing. Please find more information",
+      "hereLink": "https://drlaurelparnell.com/"
     },
     "backgroundAndExperience": {
       "firstPart": "I earned my Doctorate in Clinical Psychology from Yeshiva University’s Albert Einstein College of Medicine, completing clinical training in psychodynamic psychotherapy. I worked across various settings including school counseling services, inpatient hospitals, psychiatric emergency services, and programs for adolescents and young adults experiencing prodromal or acute psychosis. I later completed my doctoral internship at Bronx Psychiatric Center, providing psychotherapy for individuals with severe and persistent mental illness, and contributed research on schizophrenia and early intervention.",

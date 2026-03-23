@@ -8,7 +8,8 @@ const Intro = () => {
   const contentMobile = (
     <div className={styles.exploreSectionMb}>
       <div className={styles.exploreContentMb}>
-        <p>{content.description}</p>
+        <p>{content.descriptionPart1}</p>
+        <p>{content.descriptionPart2}</p>
       </div>
       <div className={styles.officeImgMb} aria-hidden='true' />
       <div className={styles.quoteCardMb}>
@@ -29,7 +30,8 @@ const Intro = () => {
       </div>
       <div className={styles.contentImgContainer}>
         <div className={styles.exploreContent}>
-          <p>{content.description}</p>
+          <p>{content.descriptionPart1}</p>
+          <p>{content.descriptionPart2}</p>
         </div>
         <div className={styles.officeImg} aria-hidden='true' />
       </div>
